@@ -1,5 +1,6 @@
 --if you wont copy this script, use script under
 -- loadstring(game:HttpGet("https://raw.githubusercontent.com/KrutoyCapybarin/KrutoyCapybarinScriptPack/refs/heads/main/PressureKrutoyCapybarin.lua"))()
+setclipboard("t.me/KrutoyCapybarin")
 local p = Instance.new("Part")
 p.Position = Vector3.new(-34, 1494, -1120)
 p.Size = Vector3.new(100, 10, 100)
