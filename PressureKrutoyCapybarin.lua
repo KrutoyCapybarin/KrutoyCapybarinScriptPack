@@ -1,3 +1,4 @@
+--u can find this script in telegram chanel.@KrutoyCapybarin
 local p = Instance.new("Part") --You CFrame equals CFrame of this part while angler is coming
 p.Position = Vector3.new(-34, 1494, -1120)
 p.Size = Vector3.new(100, 10, 100)--your CFrame while angler is coming
