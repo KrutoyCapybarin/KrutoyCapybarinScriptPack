@@ -329,6 +329,19 @@ Tab:AddButton({
 		end
 			end    
 })
+SettingsSection:AddButton({
+	Name = "Teleport menu to starter position (Middle)",
+	Callback = function()
+        game.CoreGui.Orion.Frame.Position = UDim2.new({0.5, -307}, {0.5, -172})
+  	end    
+})
+--teleport menu to good mobile pos
+SettingsSection:AddButton({
+	Name = "Teleport menu to good position (For mobile users)",
+	Callback = function()
+        game.CoreGui.Orion.Frame.Position = UDim2.new({0.5, -583}, {0.5, -351})
+  	end    
+})
 print("Krutoy Capybarin make this script better,also u can execute old version of the script.Its on my git hub repo in README file.")
 print("#CapybarasAreCute :3")
 print("Join our Telegram chanels! ⬇️")
