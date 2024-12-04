@@ -1,20 +1,17 @@
---if you wont copy this script, use script under
--- loadstring(game:HttpGet("https://raw.githubusercontent.com/KrutoyCapybarin/KrutoyCapybarinScriptPack/refs/heads/main/PressureKrutoyCapybarin.lua"))()
-setclipboard("t.me/KrutoyCapybarin")
-local p = Instance.new("Part")
+local p = Instance.new("Part") --You CFrame equals CFrame of this part while angler is coming
 p.Position = Vector3.new(-34, 1494, -1120)
-p.Size = Vector3.new(100, 10, 100)
-p.Transparency = 0
-p.Anchored = true  
-p.Parent = workspace
-local sp = 45
+p.Size = Vector3.new(100, 10, 100)--your CFrame while angler is coming
+p.Transparency = 0--part is invisible
+p.Anchored = true  --part is anchored,cant drop to void
+p.Parent = workspace --part will be added in workspace
+local sp = 45 --Player's speed
 local key = {}
 local monster = {}
 local trickster ={}
 local locker = {}
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
 local Window = OrionLib:MakeWindow({
-	Name = " Krutoy Capybarin pressure Script",
+	Name = " Capy Pressure Script",--dont change it,please :3
 	HidePremium = false,
 	SaveConfig = true,
 	ConfigFolder = "PressureScript"
@@ -24,6 +21,8 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+Tab:AddParagraph("t.me/KrutoyCapybarin")
+Tab:AddParagraph("My Telegram chanel,join for more scripts! ")
 local Lobby = Window:MakeTab({
 	Name = "Lobby",
 	Icon = "rbxassetid://4483345998",
@@ -33,16 +32,16 @@ Tab:AddSlider({
 	Name = "Set Walkspeed(PC only)",
 	Min = 0,
 	Max = 100,
-	Default = 45,
+	Default = 45, --player's walksped
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "sp",
+	ValueName = "sp", --at end of the script,Player's walkspeed will be equals sp.Value
 	Callback = function(Value)
 		sp = Value
 	end    
 })
 Tab:AddButton({
-	Name = "Fullbright",
+	Name = "Fullbright", --u can see in dark rooms
 	Callback = function()
 		local lighting = game.Lighting
 		lighting.Brightness = 2
@@ -53,25 +52,25 @@ Tab:AddButton({
 	end    
 })
 Tab:AddToggle({
-	Name = "no proxmitiyprompt duration",
+	Name = "no proxmitiyprompt duration", --you will open new door in 0.1 seconds.U dont need to hold E.
 	Default = true,
 	Flag = "asdas",
 	Save = true
 })
 Tab:AddToggle({
-	Name = "Notify Monster",
+	Name = "Notify Monster",--if monster has spawned, you will get alert on your screen
 	Default = true,
 	Flag = "NotifyMonster",
 	Save = true
 })
 Tab:AddToggle({
-	Name = "Avoid any Monster (tested)",
+	Name = "Avoid any Monster (turn off it The Ridge)",
 	Default = true,
 	Flag = "avoids",
 	Save = true
 })
 Tab:AddToggle({
-	Name = "No Eyefestation",
+	Name = "No Eyefestation", -- that green "shark" will will destroyed for u
 	Default = true,
 	Flag = "noeyefestation",
 	Save = true
@@ -105,7 +104,7 @@ Tab:AddToggle({
 	end    
 })
 Tab:AddToggle({
-	Name = "TricksterRoom ESP",
+	Name = "TricksterRoom ESP", --esp fake doors
 	Default = true,
 	Flag = "TricksterRoomdanger",
 	Save = true,
@@ -116,7 +115,7 @@ Tab:AddToggle({
 	end    
 })
 Tab:AddToggle({
-	Name = "Monster Locker ESP",
+	Name = "Monster Locker ESP", --esp that fake locker,purple /red/green/yellow monster in hiding spots
 	Default = true,
 	Flag = "monsterlocker",
 	Save = true,
@@ -131,6 +130,7 @@ local credits = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+--now, after credits,starts functions of the buttons
 credits:AddParagraph("made by Krutoy Capybarin", "Krutoy suslik and no name guy :D")
 credits:AddParagraph("Good luck! :)")
 local others = Window:MakeTab({
@@ -197,7 +197,7 @@ local function applylocker(inst)
 	local label = Instance.new("TextLabel")
 	label.Size = UDim2.new(1, 0, 1, 0)
 	label.Text = "Monster Locker"
-	label.TextColor3 = Color3.new(0.5, 0, 0.5) 
+	label.TextColor3 = Color3.new(0.5, 0, 0.5)
 	label.BackgroundTransparency = 1
 	label.TextStrokeTransparency = 0
 	label.TextScaled = true
@@ -306,4 +306,30 @@ game:GetService("RunService").Heartbeat:Connect(function()
 end)
 loadstring(game:HttpGet(('https://pastefy.app/M0N30XXG/raw'),true))()
 
---Script by no name,modifed by krutoy capybarin
+Tab:AddButton({
+	Name = "100 HP",
+	Callback = function()
+		game.Players.LocalPlayer.Character.Humanoid.Health = 100
+			end    
+})
+
+Tab:AddButton({
+	Name = "999 HP (Working)",
+	Callback = function()
+		game.Players.LocalPlayer.Character.Humanoid.Health = 999
+			end    
+})
+
+Tab:AddButton({
+	Name = "Inf HP",
+	Callback = function()
+		while wait(5) do
+		game.Players.LocalPlayer.Character.Humanoid.Health = 999
+		end
+			end    
+})
+print("Krutoy Capybarin make this script better,also u can execute old version of the script.Its on my git hub repo in README file.")
+print("#CapybarasAreCute :3")
+print("Join our Telegram chanels! ⬇️")
+print(" t.me/KrutoyCapybarin ")
+print("t.me/CapyPhobia")
